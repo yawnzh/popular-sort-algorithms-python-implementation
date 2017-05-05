@@ -17,20 +17,25 @@ def bubbleSort(nums):
 ```python
 def insertionSort(nums):
     for i in range(len(nums)):
-        key=nums[i]
-        j=i-1
-        while j>=0 and nums[j]>key:
-            nums[j+1]=nums[j]
-            nums[j]=key
-            j-=1
+        target=0
+        while target<i:
+            if nums[target]>=nums[i]:
+                break
+            target+=1
+        insert(nums,target,i)
     return nums
+
+def insert(nums,target,original):
+    backup=nums[original]
+    for i in range(original,target,-1):
+        nums[i]=nums[i-1]
+    nums[target]=backup
 ```
 3. Selction sort
 ```python
 def selectSort(nums):
     for i in range(len(nums)):
-        min_of_right=min(range(i,len(nums)),
-            key=lambda x:nums[x])
+        j=min(range(i,len(nums)),key=lambda x:nums[x])
         nums[i],nums[j]=nums[j],nums[i]
     return nums
 ```
