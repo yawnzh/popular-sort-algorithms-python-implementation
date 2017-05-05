@@ -1,4 +1,4 @@
-# sort-algorithm-python-implementation
+# popular-sort-algorithms-python-implementation
 ## Simple Sort
 1. Bubble sort
 ```python
