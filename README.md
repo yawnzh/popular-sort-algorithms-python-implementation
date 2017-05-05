@@ -2,7 +2,7 @@
 ## Simple Sort
 1. Bubble sort
 ```python
-def bubble_sort(nums):
+def bubbleSort(nums):
     for i in range(len(nums)):
         changed=False
         for j in range(i+1,len(nums)):
@@ -15,7 +15,7 @@ def bubble_sort(nums):
 ```
 2. Insertion sort
 ```python
-def insertion_sort(nums):
+def insertionSort(nums):
     for i in range(len(nums)):
         key=nums[i]
         j=i-1
@@ -27,7 +27,7 @@ def insertion_sort(nums):
 ```
 3. Selction sort
 ```python
-def select_sort(nums):
+def selectSort(nums):
     for i in range(len(nums)):
         min_of_right=min(range(i,len(nums)),
             key=lambda x:nums[x])
