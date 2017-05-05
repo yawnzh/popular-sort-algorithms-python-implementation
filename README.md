@@ -54,7 +54,7 @@ def merge(*list_of_nums):
     return res
 ```
 2. Heap sort
-```
+```python
 def heapSort(nums):
     end=len(nums)-1
     heapify(nums,end)
